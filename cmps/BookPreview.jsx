@@ -3,7 +3,7 @@ export function BookPreview({ book }) {
         <h2>{book.title}</h2>
         <p>{book.listPrice}</p>
         <img 
-            src={`./assets/img/${book.title}.jpg`} 
+            src={`./assets/img/1.jpg`} 
             alt="" />
     </article>
 }
