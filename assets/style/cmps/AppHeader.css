@@ -1,12 +1,15 @@
 .app-header {
     background-color: var(--clr2bg);
     color: var(--clr1);
+
+    border-radius: 5px;
 }
 
 .header-container {
     display: flex;
     align-items: center;
 
+    height: 80px;
 }
 
 .header-container h1 {
