@@ -1,6 +1,7 @@
 .app-header {
     background-color: var(--clr2bg);
     color: var(--clr1);
+    font-family: sedgwick display;
 
     border-radius: 5px;
 }
