@@ -1,3 +1,5 @@
+import { LongTxt } from '../cmps/LongTxt.jsx'
+
 export function BookDetails({ book, onClearSelectedBook }) {
     const { title, listPrice, pageCount, publishedDate, thumbnail, description } = book
 
@@ -43,7 +45,7 @@ export function BookDetails({ book, onClearSelectedBook }) {
                 <p>Pages: {pageCount}</p>
             </div>
 
-            <p className="description">{description}</p>
+            <LongTxt txt={description} length={100} />
         </article>
-    );
+    )
 }
