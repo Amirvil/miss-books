@@ -1,11 +1,11 @@
 /* Typography */
 
 @font-face {
-    font-family: 'sedgwick';
-    src: url(../../fonts/SedgwickAve-Regular.ttf);
+    font-family: 'literata';
+    src: url(../../fonts/Literata-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
-    font-family: 'sedgwick display';
-    src: url(../../fonts/SedgwickAveDisplay-Regular.ttf);
+    font-family: 'roboto';
+    src: url(../../fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }

@@ -15,7 +15,7 @@ export function BookFilter({ filterBy, setFilterBy }) {
     }, [filterByToEdit])
 
     return <section className="book-filter">
-        <p>Serch:</p>
+        <p>Search:</p>
         <input 
             value={filterByToEdit.txt}
             onChange={ev => handleChange(ev)}

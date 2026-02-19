@@ -11,7 +11,7 @@ html {
 body {
     background-color: var(--clr1bg);
     color: var(--clr1);
-    font-family: sedgwick;
+    font-family: roboto
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -29,6 +29,7 @@ h5,
 h6 {
     margin: 0 0;
     text-wrap: balance;
+    font-family: literata;
 }
 
 p {
