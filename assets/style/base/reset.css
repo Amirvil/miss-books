@@ -9,9 +9,19 @@ html {
 }
 
 body {
-    background-color: var(--clr1bg);
-    color: var(--clr1);
-    font-family: roboto
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/img/library.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: var(--clr2);
+    font-family: roboto;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -64,25 +74,4 @@ textarea,
 select {
     max-width: 100%;
     font: inherit;
-}
-
-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: none;
-
-    background: var(--clr2bg);
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
-    color: var(--clr1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-
-button:focus {
-    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-    outline: 0;
 }

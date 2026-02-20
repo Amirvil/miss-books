@@ -4,7 +4,7 @@ export function BookList({ books, onRemoveBook, onSelectBook }) {
     return <section className="book-list">
         <ul className="fluid-grid">
             {books.map(book => (
-                <li key={book.id}>
+                <li key={book.id} className="book-card">
                     <BookPreview book={book} />
                     <div className="actions">
                         <button 

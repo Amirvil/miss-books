@@ -1,29 +1,38 @@
 .app-header {
-    background-color: var(--clr2bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+
     color: var(--clr1);
     font-family: literata;
 
-    border-radius: 5px;
-
-    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
 }
 
 .header-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-    height: 80px;
+    padding: 20px;
+    gap: 40px;
 }
 
 .header-container h1 {
-    flex-grow: 1;
-
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 .app-nav {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 30px;
 }
 
 
@@ -32,3 +41,6 @@ a.active {
     font-weight: 600;
 }
 
+.white {
+    color: var(--clr2);
+}

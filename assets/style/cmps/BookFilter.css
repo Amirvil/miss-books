@@ -1,0 +1,13 @@
+.book-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.search-container,
+.filter-container {
+    display: flex;
+    gap: 10px;
+}

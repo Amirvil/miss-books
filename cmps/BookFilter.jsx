@@ -1,7 +1,7 @@
 const { useState, useEffect } = React
 
 export function BookFilter({ filterBy, setFilterBy }) {
-    const [ filterByToEdit, setFilterByToEdit ] = useState(filterBy)
+    const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
     function handleChange(ev) {
         const { type, value, name } = ev.target
@@ -15,19 +15,24 @@ export function BookFilter({ filterBy, setFilterBy }) {
     }, [filterByToEdit])
 
     return <section className="book-filter">
-        <p>Search:</p>
-        <input 
-            value={filterByToEdit.txt}
-            onChange={ev => handleChange(ev)}
-            type="text" 
-            name="txt"
-            placeholder="title"/>
+        <div className="search-container">
+            <h2>Search:</h2>
+            <input
+                value={filterByToEdit.txt}
+                onChange={ev => handleChange(ev)}
+                type="text"
+                name="txt"
+                placeholder="title" />
+        </div>
 
-        <input 
-            value={filterByToEdit.price || ''}
-            onChange={ev => handleChange(ev)}
-            type="number" 
-            name="price"
-            placeholder="Price"/>
+        <div className="filter-container">
+            <h3>Filter By:</h3>
+            <input
+                value={filterByToEdit.price || ''}
+                onChange={ev => handleChange(ev)}
+                type="number"
+                name="price"
+                placeholder="Price" />
+        </div>
     </section>
 }
