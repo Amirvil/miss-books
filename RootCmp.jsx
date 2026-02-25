@@ -10,6 +10,7 @@ export function RootCmp() {
 
     return <section className="app main-layout">
         <AppHeader page={page} onSetPage={setPage} />
+
         <main className="container">
             {page === 'home' && <Home />}
             {page === 'about' && <About />}
