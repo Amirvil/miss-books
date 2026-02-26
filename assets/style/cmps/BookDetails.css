@@ -1,5 +1,7 @@
 .book-details {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 1fr;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -19,15 +21,15 @@
     font-size: 1rem;
     line-height: 1.6;
 
-    .red{
+    .red {
         color: var(--clr4);
     }
 
-    .green{
+    .green {
         color: var(--clr5);
     }
 
-    p{
+    p {
         margin: 0;
     }
 }
