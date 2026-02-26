@@ -1,7 +1,7 @@
 import { LongTxt } from '../cmps/LongTxt.jsx'
 
 export function BookDetails({ book, onClearSelectedBook }) {
-    const { title, listPrice, pageCount, publishedDate, thumbnail, description } = book
+    const { title, authors, listPrice, pageCount, publishedDate, thumbnail, description, language, categories } = book
 
     function getReadingLevel(count) {
         if (count > 500) return 'Serious Reading'
@@ -31,6 +31,17 @@ export function BookDetails({ book, onClearSelectedBook }) {
         return (result.toFixed(2))
     }
 
+    function getBookLanguage(language) {
+        switch (language) {
+            case 'he':
+                return 'Hebrew'
+            case 'sp':
+                return 'Spanish'
+            default:
+                return 'English'
+        }
+    }
+
     return (
         <article className="book-details">
 
@@ -41,15 +52,21 @@ export function BookDetails({ book, onClearSelectedBook }) {
 
             <h2>{title}</h2>
 
+            <div className="book-stats">
+
+                <p>Authors: {authors}</p>
+                <p>Published: {publishedDate} - {getPublishAge(publishedDate)}</p>
+                <p>Language: {getBookLanguage({language})}</p>
+                <p>Categories: {categories.join(', ')}</p>
+                <p>Pages: {pageCount}</p>
+                <p>Reading: {getReadingLevel(pageCount)}</p>
+
+
+            </div>
+
             <h3 className={getPriceClass(getPriceInShekels(listPrice.amount, listPrice.currencyCode))}>
                 Price: {getPriceInShekels(listPrice.amount, listPrice.currencyCode)} ILS
             </h3>
-
-            <div className="book-stats">
-                {getReadingLevel(pageCount) && <p>Reading: {getReadingLevel(pageCount)}</p>}
-                {getPublishAge(publishedDate) && <p>Status: {getPublishAge(publishedDate)}</p>}
-                <p>Pages: {pageCount}</p>
-            </div>
 
             <LongTxt txt={description} length={100} />
             <button onClick={onClearSelectedBook}>Back</button>
