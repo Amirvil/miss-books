@@ -4,11 +4,12 @@ export function BookFilter({ filterBy, setFilterBy }) {
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
     function handleChange(ev) {
-        const { type, value, name } = ev.target
+		const field = ev.target.name
+		const value = ev.target.type === 'number' ? +ev.target.value : ev.target.value
 
-        setFilterByToEdit(prev => (
-            { ...prev, [name]: type === 'text' ? value : +value }))
-    }
+		setFilterByToEdit(prevFilter => ({ ...prevFilter, [field]: value }))
+	}
+
 
     useEffect(() => {
         setFilterBy(filterByToEdit)
@@ -22,7 +23,7 @@ export function BookFilter({ filterBy, setFilterBy }) {
                 onChange={ev => handleChange(ev)}
                 type="text"
                 name="txt"
-                placeholder="title" />
+                placeholder="Title" />
         </div>
 
         <div className="filter-container">

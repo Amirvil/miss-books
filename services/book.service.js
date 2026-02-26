@@ -466,7 +466,7 @@ function query(filterBy = {}) {
             }
 
             if (filterBy.price) {
-                books = books.filter(book => book.listPrice >= filterBy.listPrice)
+                books = books.filter(book => book.listPrice.amount <= filterBy.price)
             }
 
             return books

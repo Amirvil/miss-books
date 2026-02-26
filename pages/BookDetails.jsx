@@ -19,9 +19,16 @@ export function BookDetails({ book, onClearSelectedBook }) {
     }
 
     function getPriceClass(amount) {
-        if (amount > 150) return 'red'
-        if (amount < 20) return 'green'
+        if (amount > 250) return 'red'
+        if (amount < 100) return 'green'
         return ''
+    }
+
+    function getPriceInShekels(amount, currencyCode) {
+        let result = amount
+        if (currencyCode === 'EUR') result = amount * 3.67
+        else if (currencyCode === 'USD') result = amount * 3.11
+        return (result.toFixed(2))
     }
 
     return (
@@ -29,13 +36,13 @@ export function BookDetails({ book, onClearSelectedBook }) {
 
             <div className="img-container">
                 <img src={thumbnail} alt={title} />
-                {listPrice.isOnSale && <div className="sale">ON SALE!</div>}
+                {listPrice.isOnSale && <h3 className="sale red">ON SALE!</h3>}
             </div>
 
             <h2>{title}</h2>
 
-            <h3 className={getPriceClass(listPrice.amount)}>
-                Price: {listPrice.amount} {listPrice.currencyCode}
+            <h3 className={getPriceClass(getPriceInShekels(listPrice.amount, listPrice.currencyCode))}>
+                Price: {getPriceInShekels(listPrice.amount, listPrice.currencyCode)} ILS
             </h3>
 
             <div className="book-stats">
