@@ -26,8 +26,7 @@ export function BookDetails({ book, onClearSelectedBook }) {
 
     return (
         <article className="book-details">
-            <button onClick={onClearSelectedBook}>Back</button>
-            
+
             <div className="img-container">
                 <img src={thumbnail} alt={title} />
                 {listPrice.isOnSale && <div className="sale">ON SALE!</div>}
@@ -46,6 +45,7 @@ export function BookDetails({ book, onClearSelectedBook }) {
             </div>
 
             <LongTxt txt={description} length={100} />
+            <button onClick={onClearSelectedBook}>Back</button>
         </article>
     )
 }

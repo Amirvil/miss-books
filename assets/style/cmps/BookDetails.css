@@ -1,0 +1,21 @@
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    color: var(--clr2);
+    text-align: center;
+
+    background: var(--clrBg2);
+    backdrop-filter: blur(8px);
+
+    padding: 20px;
+
+    height: 100%;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}

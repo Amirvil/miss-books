@@ -38,3 +38,11 @@
 .no-scroll {
     overflow: hidden;
 }
+
+.white{
+    color: var(--clr2);
+}
+
+.orange {
+    color: var(--clr1);
+}

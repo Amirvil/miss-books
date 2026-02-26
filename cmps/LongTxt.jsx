@@ -12,7 +12,7 @@ export function LongTxt({ txt, length = 100 }) {
             {displayText}
             <button 
                 onClick={() => setIsExpanded(prev => !prev)}
-                style={{ marginLeft: '5px', cursor: 'pointer', border: 'none', background: 'none', color: 'blue', textDecoration: 'underline' }}
+                style={{ marginLeft: '5px', cursor: 'pointer', border: 'none', background: 'none', color: 'whitesmoke', textDecoration: 'underline' }}
             >
                 {isExpanded ? 'Read Less' : 'Read More'}
             </button>

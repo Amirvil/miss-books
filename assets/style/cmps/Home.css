@@ -5,24 +5,21 @@
 
     height: 100%;
 
-    color: whitesmoke;
+    color: var(--clr2);
     text-align: center;
 
-    background: rgba(255, 157, 0, 0.01);
+    background: var(--clrBg2);
     backdrop-filter: blur(8px);
-}
 
-.welcome-container {
-    padding: 20px;
-}
+    .welcome-container {
+        padding: 20px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
 
-.home h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.welcome-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+    }
 }

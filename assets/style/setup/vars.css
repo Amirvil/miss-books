@@ -1,9 +1,11 @@
 :root {
-
-  --clr1bg: whitesmoke;
-  --clr2bg: #892201;
-
   --clr1: #df8402;
+  --clr3: #dba963;
+
   --clr2: whitesmoke;
 
+  --clr4: #e74c3c;
+
+  --clrBg1: rgba(255, 255, 255, 0.2);
+  --clrBg2: rgba(255, 157, 0, 0.01);
 }

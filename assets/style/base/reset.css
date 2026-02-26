@@ -72,6 +72,22 @@ input,
 button,
 textarea,
 select {
-    max-width: 100%;
     font: inherit;
+}
+
+button {
+    background-color: var(--clr3);
+    color: var(--clr2);
+    border: 1px solid var(--clr1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--clr1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

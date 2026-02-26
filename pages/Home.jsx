@@ -1,9 +1,9 @@
 export function Home() {
     return <section className="home">
         <div className="welcome-container">
-            <h2>Welcome to Miss Books</h2>
+            <h2>Welcome to Miss <span className="orange">Books</span></h2>
             <p className="welcome-text">
-                Your neighborhood sanctuary tucked away in the heart of the city.
+                Your neighborhood sanctuary tucked away in the heart of the kibbutz.
                 We believe that every book is a conversation waiting to happen, and our shelves
                 are curated with the same care you’d give a private library.
             </p>
@@ -17,7 +17,7 @@ export function Home() {
                 next great read together.
             </p>
 
-            <button className="explore-btn">Browse the Shelves</button>
+            <button className="shop-btn">Browse the Shelves</button>
         </div>
     </section>
 }

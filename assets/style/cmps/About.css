@@ -3,11 +3,23 @@
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
+    height: 100%;
 
     color: whitesmoke;
     text-align: center;
 
     background: rgba(255, 157, 0, 0.01);
     backdrop-filter: blur(8px);
+
+    .about-content {
+        padding: 20px;
+
+        font-size: 1.2rem;
+        line-height: 1.6;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    }
 }
