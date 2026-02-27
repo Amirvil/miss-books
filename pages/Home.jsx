@@ -1,3 +1,5 @@
+const { Link, useParams, useNavigate } = ReactRouterDOM
+
 export function Home() {
     return <section className="home">
         <div className="welcome-container">
@@ -16,8 +18,9 @@ export function Home() {
                 Step inside, leave the rush of the street behind, and let’s find your
                 next great read together.
             </p>
-
-            <button className="shop-btn">Browse the Shelves</button>
+            <Link to="/books">
+                <button className="shop-btn">Browse the Shelves</button>
+            </Link>
         </div>
     </section>
 }

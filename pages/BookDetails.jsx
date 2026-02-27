@@ -85,18 +85,29 @@ export function BookDetails() {
                 <h3 className={getPriceClass(getPriceInShekels(listPrice.amount, listPrice.currencyCode))}>
                     Price: {getPriceInShekels(listPrice.amount, listPrice.currencyCode)} ILS
                 </h3>
-                <LongTxt txt={description} length={100} />
+                <p>Description: </p><LongTxt txt={description} length={100} />
+                <Link to={`/book/edit/${book.id}`}><button>Edit</button></Link>
+            </div>
+
+            <div className="prev-next">
+                <Link to={`/books/${book.prevBookId}`}>
+                    <button>Previus</button>
+                </Link>
+                <Link to={`/books/${book.nextBookId}`}>
+                    <button>Next</button>
+                </Link>
+            </div>
+
+            <div className="reviews">
 
             </div>
-            <Link to={`/books`}>
-                <button>Back</button>
-            </Link>
-            <Link to={`/books`}>
-                <button>Next</button>
-            </Link>
-            <Link to={`/books`}>
-                <button>Previus</button>
-            </Link>
+
+            <div className="back">
+                <Link to={`/books`}>
+                    <button>Back</button>
+                </Link>
+            </div>
+
         </article>
     )
 }
